@@ -22,11 +22,7 @@ public:
     Thread(Thread &&other) = delete;
     Thread &operator=(Thread &&other) = delete;
 
-    ~Thread() noexcept(false) {
-        if (thread_.joinable()) {
-            throw apex::thread::ThreadStillRunningError(thread_name_);
-        }
-    }
+    ~Thread() noexcept(false);
 
     inline void Join() {
         if (thread_.joinable()) {
