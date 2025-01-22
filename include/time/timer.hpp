@@ -18,7 +18,7 @@ public:
     }
 
     template <typename T>
-    inline typename T::rep GetDuration() {
+    typename T::rep GetDuration() {
         auto end_time = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<T>(end_time - start_time);
         return duration.count();

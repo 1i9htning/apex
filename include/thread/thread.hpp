@@ -2,7 +2,7 @@
 #include <string>
 #include <thread>
 
-#include "thread/exception.hpp"
+#include "./exception.hpp"
 
 namespace apex {
 
